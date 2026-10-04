@@ -1,0 +1,9 @@
+T1 PASS | Reminder + EmailChannel | result=Email Envelope: [Reminder: Meeting at 5 PM]
+T2 PASS | Reminder + SmsChannel | result=SMS: Reminder: Meeting at 5 PM
+T3 PASS | UrgentAlert + EmailChannel | result=Email Envelope: [URGENT: Server is down]
+T4 PASS | UrgentAlert + SmsChannel | result=SMS: URGENT: Server is down
+T5 PASS sameObject=true | stateUnchanged=true
+before=Email Envelope: [Reminder: System Backup] | after=SMS: Reminder: System Backup
+T6 PASS | Reminder + PushChannel | result=Push Notification: {Reminder: New comment}
+T7 PASS | UrgentAlert + PushChannel | result=Push Notification: {URGENT: Security breach}
+SUMMARY: 7/7 PASS
